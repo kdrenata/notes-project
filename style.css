@@ -10,6 +10,7 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
+    height: 100vh;
 }
 legend {
     all: unset
@@ -169,12 +170,51 @@ fieldset {
     gap: 8px;
     font-family: "Montserrat", sans-serif;
 }
-
 .filter-box {
+    font-size: 12px;
     line-height: 24px;
-    font-size: 16px;
-    margin: 138px;
-    text-align: center;
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    margin: 24px;
+}
+.box-messages {
+    display: flex;
+    color: #fff;
+    padding: 12px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.messages {
+    display: flex;
+    padding: 12px 24px;
+    border-radius: 10px;
+    gap: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.info-messages {
+    background-color: #47b27d;
+    width: 240px;
+}
+.maxLength-messages {
+    background-color: #F23D5B;
+    width: 430px;
+}
+.fill-messages {
+    background-color: #F23D5B;
+    width: 240px;
+}
+.delete-messages {
+    background-color: #47b27d;
+    width: 240px;
 }
 
 

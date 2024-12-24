@@ -60,18 +60,32 @@
                     </div>
                 </div>
             </form>
+            <div class="filter-box">
+                <img src="assets/images/checkbox-inactive.svg" alt="square">Показать только избранные заметки
+            </div>
         </div>
-
-        <div class="filter-box">
-
-        </div>
-
+        
         <ul class="notes-list">
             <!-- Сюда будут рендерится заметки из JavaScript -->
         </ul>
 
-        <div class="messages-box">
-            <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
+        <div class="box-messages">
+            <div class="messages info-messages">
+                <img class="add-messages-icon" src="assets/images/done.svg" alt="done">
+                <span class="add-messages-text">Заметка добавлена!</span>
+            </div>
+            <div class="messages maxLength-messages">
+                <img class="add-messages-icon" src="assets/images/attention-icon.svg" alt="attention-icon">
+                <span class="add-messages-text">Максимальная длина заголовка - 50 символов</span>
+            </div>
+            <div class="messages fill-messages">
+                <img class="add-messages-icon" src="assets/images/attention-icon.svg" alt="fill-icon">
+                <span class="add-messages-text">Заполните все поля!</span>
+            </div>
+            <div class="messages delete-messages">
+                <img class="add-messages-icon" src="assets/images/done.svg" alt="delete-icon">
+                <span class="add-messages-text">Заметка удалена!</span>
+            </div>
         </div>
         <script src="main.js"></script>
     </body>
