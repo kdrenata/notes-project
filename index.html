@@ -13,7 +13,7 @@
         <header class="header">
             <div class="container">
                 <div class="header-wrapper">
-                    <img class="header-logo" src="assets/images/📝Notes.svg" alt="left-logo">
+                    <img class="header-logo" src="assets/images/Notes.svg" alt="left-logo">
                     <div class="header-counter">
                         <img src="assets/images/icon.svg" alt="right-logo">
                         <p class="header-text">Всего заметок: <span class="count">0</span></p>
@@ -56,12 +56,17 @@
                                 </li>
                             </ul>                            
                         </fieldset>
-                        <button class="btn"><img src="assets/images/plus.svg" alt="btn">Добавить заметку</button>
+                        <button type="submit" class="btn"><img src="assets/images/plus.svg" alt="btn">Добавить заметку</button>
                     </div>
                 </div>
             </form>
             <div class="filter-box">
-                <img src="assets/images/checkbox-inactive.svg" alt="square">Показать только избранные заметки
+                <img class="filter-checkbox" src="assets/images/checkbox-inactive.png" alt="square">
+                <p>Показать только избранные заметки</p>
+            </div>
+            <div class="text-info-wrapper">
+                <p class="text-info">У вас нет еще ни одной заметки <br>
+                    Заполните поля выше и создайте свою первую заметку!</p>
             </div>
         </div>
         
@@ -70,19 +75,19 @@
         </ul>
 
         <div class="box-messages">
-            <div class="messages info-messages">
+            <div class="messages info-message">
                 <img class="add-messages-icon" src="assets/images/done.svg" alt="done">
                 <span class="add-messages-text">Заметка добавлена!</span>
             </div>
-            <div class="messages maxLength-messages">
+            <div class="messages maxLength-message">
                 <img class="add-messages-icon" src="assets/images/attention-icon.svg" alt="attention-icon">
                 <span class="add-messages-text">Максимальная длина заголовка - 50 символов</span>
             </div>
-            <div class="messages fill-messages">
+            <div class="messages fill-message">
                 <img class="add-messages-icon" src="assets/images/attention-icon.svg" alt="fill-icon">
                 <span class="add-messages-text">Заполните все поля!</span>
             </div>
-            <div class="messages delete-messages">
+            <div class="messages delete-message">
                 <img class="add-messages-icon" src="assets/images/done.svg" alt="delete-icon">
                 <span class="add-messages-text">Заметка удалена!</span>
             </div>

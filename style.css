@@ -59,8 +59,6 @@ fieldset {
     margin-left: 5px;
 }
 
-
-
 .form-group {
     font-size: 12px;
     line-height: 24px;
@@ -71,6 +69,7 @@ fieldset {
     flex-direction: column;
     padding: 24px;
     gap: 12px;
+    border-radius: 10px;
 }
 
 .form-wrapper {
@@ -169,10 +168,16 @@ fieldset {
     display: flex;
     gap: 8px;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
 .filter-box {
     font-size: 12px;
-    line-height: 24px;
     display: flex;
     gap: 8px;
     justify-content: end;
@@ -184,7 +189,7 @@ fieldset {
     padding: 12px 24px;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: end;
+    align-items: flex-end;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -200,21 +205,89 @@ fieldset {
     line-height: 24px;
 }
 
-.info-messages {
+.info-message {
     background-color: #47b27d;
     width: 240px;
+    display: none
 }
-.maxLength-messages {
+.maxLength-message {
     background-color: #F23D5B;
     width: 430px;
+    display: none
 }
-.fill-messages {
+.fill-message {
     background-color: #F23D5B;
     width: 240px;
+    display: none
 }
-.delete-messages {
+.delete-message {
     background-color: #47b27d;
     width: 240px;
+    display: none
+}
+
+.notes-list {
+    list-style: none;
+    padding: 0px 64px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.note {
+    display: flex;
+    max-width: 368px;
+    min-width: 368px;
+    box-shadow: 0 8px 12px rgba(11, 12, 13, 0.16);
+    border-radius: 10px;
+    margin-bottom: 24px;
+    flex-direction: column;
+}
+
+.note-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+.note-top-red {
+    background-color: #F37D7D;
+}
+.note-top-green {
+    background-color: #C2F37D;
+}
+.note-top-blue {
+    background-color: #7DE1F3;
+}
+.note-top-yellow {
+    background-color: #F3DB7D;
+}
+.note-top-purple {
+    background-color: #E77DF3;
+}
+
+.note-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+}
+.note-image-wrapper {
+    display: flex;
+    gap: 12px;
+    padding: 16px 12px;
+}
+.note-description {
+    padding: 12px;
+}
+.text-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.text-info {
+    display: flex;
+    text-align: center;
 }
 
 
