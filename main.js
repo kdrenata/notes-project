@@ -53,12 +53,21 @@ const model = {
     addNote(title, description, color) {
         const newNote = { title, description, color, id: Math.random(), isFavorite: false }
         this.notes.unshift(newNote)
-        view.renderNotes(this.notes)
+        // обновляем интерфейс и вызываем 2 метода представления (отображаем новую заметку и показываем количество заметок в счетчике)
+        let filterednotes = null
+        if (this.isShowOnlyFavorite){
+            filterednotes = this.notes.filter(note => note.isFavorite)
+        }
+        view.renderNotes(filterednotes ? filterednotes : this.notes)
         view.renderNotesCount(this.notes.length)
     },
     deleteNote(id) {
+        let filterednotes = null
         this.notes = this.notes.filter(note => note.id !== id)
-        view.renderNotes(this.notes)
+        if (this.isShowOnlyFavorite){
+            filterednotes = this.notes.filter(note => note.isFavorite)
+        } else this.notes = this.notes.filter(note => note.id !== id)
+        view.renderNotes(filterednotes ? filterednotes : this.notes)
         view.renderNotesCount(this.notes.length)
     },
     toggleFavorite(id) {
@@ -68,6 +77,9 @@ const model = {
             }
             return note
         })
+        if (this.isShowOnlyFavorite){
+            this.notes = this.notes.filter(note => note.isFavorite)
+        }
         view.renderNotes(this.notes)
         view.renderNotesCount(this.notes.length)
     },
@@ -75,11 +87,12 @@ const model = {
         this.isShowOnlyFavorite = !this.isShowOnlyFavorite
         let notesToRender
         if (this.isShowOnlyFavorite) {
-            notesToRender = this.notes.filter(note => note.isFavorite === true)
+            notesToRender = this.notes.filter(note => note.isFavorite)
         }
         else {
             notesToRender = this.notes
-        }        
+        }     
+        
         view.renderNotes(notesToRender)
         view.renderNotesCount(notesToRender.length)
     }
